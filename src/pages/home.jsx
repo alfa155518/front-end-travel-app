@@ -19,7 +19,6 @@ function Home() {
       <Gallery />
       <NewsLetter />
       <Footer />
-      {/* <MapBox /> */}
     </section>
   );
 }

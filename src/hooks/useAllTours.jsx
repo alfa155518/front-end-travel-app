@@ -4,8 +4,7 @@ import { useState } from "react";
 function useAllTours() {
   const [limit] = useState(6);
   const [page, setPage] = useState(1);
-
-  console.log(page);
+  
   const getAllTours = async (queryKey) => {
     try {
       const [, { page, limit }] = queryKey;

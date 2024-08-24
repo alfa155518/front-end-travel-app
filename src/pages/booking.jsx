@@ -8,8 +8,6 @@ import "../sass/pages/booking.css";
 import EmptySection from "../components/emptySection";
 function Booking() {
   const { allBookings } = useContext(TourContext);
-  const status = true;
-  console.log(allBookings);
   return (
     <>
       <NavBar />

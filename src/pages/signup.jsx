@@ -18,7 +18,6 @@ function Signup() {
   const { mutate, isPending } = useMutation({
     mutationFn: handleSubmit,
     onSuccess: (response) => {
-      console.log(response);
       notify(response.data.status, "success");
       navigate("/login");
     },

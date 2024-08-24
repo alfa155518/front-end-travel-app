@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "react-loading-skeleton/dist/skeleton.css";
 import "./sass/main.css";
 import App from "./App.jsx";
-// Create a client
+
 const queryClient = new QueryClient();
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>

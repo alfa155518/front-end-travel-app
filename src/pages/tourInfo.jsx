@@ -11,11 +11,8 @@ import "../sass/pages/tour-info.css";
 
 function TourInfo() {
   const { tourId } = useParams();
-  const { Tours } = useContext(TourContext);
 
-  // const tour = Tours.find((tour) => tour._id === tourId);
-
-  const { data: tour, isLoading } = useQuery({
+  const { data: tour } = useQuery({
     queryKey: ["tours", tourId],
     queryFn: async () => {
       try {
@@ -33,8 +30,6 @@ function TourInfo() {
     refetchInterval: 1000 * 60 * 15, // 15 minutes
   });
 
-  if (isLoading) return <div>Loading...</div>;
-  console.log(tour);
   return (
     <>
       <NavBar />

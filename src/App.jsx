@@ -21,7 +21,6 @@ function App() {
         <Route path="/:tourId" element={<TourInfo />} />
         <Route path="/about" element={<About />} />
         <Route path="/booking" element={<Booking />} />
-        {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
       <ReactQueryDevtools initialIsOpen={false} />
       <Toaster />
