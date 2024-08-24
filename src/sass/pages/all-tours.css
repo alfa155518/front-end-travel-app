@@ -1,0 +1,17 @@
+.tours__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  @apply mx-[1rem] py-[6rem];
+}
+@media (max-width: 667px) {
+  .tours__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    text-align: center;
+  }
+}
+
+.hero__tours {
+  @apply relative h-[90vh] w-[100%] bg-no-repeat bg-cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6) 100%, transparent 0%, transparent 0%), url("../../images/tours/tour-10-cover.webp");
+}

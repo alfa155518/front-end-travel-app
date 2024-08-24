@@ -1,0 +1,7 @@
+.popular-tours-content {
+  @include grid(250px);
+  @media (max-width: 667px) {
+    @include grid(200px);
+    text-align: center;
+  }
+}

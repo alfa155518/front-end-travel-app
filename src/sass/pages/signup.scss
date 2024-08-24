@@ -1,0 +1,59 @@
+@use "../helpers/variables" as *;
+@use "../helpers/mixins" as *;
+
+.signup-page,
+.login-page {
+  @include center-section(2.5rem, 2.5rem, 3rem, 3rem);
+  .primary-heading {
+    padding-bottom: 3rem;
+    color: $whiteColor;
+    h1 {
+      font-size: 3rem;
+      strong {
+        color: $primaryColor;
+      }
+    }
+  }
+  form {
+    input {
+      width: 100%;
+      padding: 0.8rem;
+      @include radios(0.5rem);
+      margin: 1rem;
+      outline: none;
+      font-size: 1.2rem;
+      &:focus {
+        margin-top: 0.5rem;
+        border-bottom: 0.3rem solid $primaryColor;
+      }
+    }
+    .input-image {
+      label {
+        color: $secondaryColor;
+        @include radios(0.7rem);
+        @include transition(0.6s);
+        &:hover {
+          background-color: $primaryColor;
+          color: $whiteColor;
+        }
+      }
+    }
+    .send-data {
+      @include transition(0.6s);
+      &:hover {
+        background-color: $secondaryColor;
+        transform: translateY(-1rem);
+        -webkit-transform: translateY(-1rem);
+        -moz-transform: translateY(-1rem);
+        -ms-transform: translateY(-1rem);
+        -o-transform: translateY(-1rem);
+      }
+    }
+  }
+  .login-link {
+    color: $whiteColor;
+    a {
+      color: $primaryColor;
+    }
+  }
+}

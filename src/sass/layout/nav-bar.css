@@ -1,0 +1,118 @@
+nav {
+  color: #f8fafc;
+}
+nav .logo a img {
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+}
+nav .links li {
+  position: relative;
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin: 1rem;
+  padding: 0.5rem;
+}
+nav .links li::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  transform: translate(-50%, -50%);
+  height: 2px;
+  background-color: #ff7e01;
+  transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+}
+nav .links li:hover::before {
+  width: 100%;
+}
+nav .links li a {
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+}
+nav .links li a:hover {
+  color: #faa935;
+}
+nav .send-data {
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  letter-spacing: 0;
+  padding: 0.1rem 0.5rem;
+}
+nav .send-data:hover {
+  background-color: #faa935;
+  transform: translateY(-0.2rem);
+  -webkit-transform: translateY(-0.2rem);
+  -moz-transform: translateY(-0.2rem);
+  -ms-transform: translateY(-0.2rem);
+  -o-transform: translateY(-0.2rem);
+}
+nav .user__logo {
+  @apply w-10 h-10 object-cover;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin: 1rem 0;
+}
+nav .bars {
+  position: relative;
+  font-size: 3rem;
+  color: #ff7e01;
+  cursor: pointer;
+  z-index: 99999;
+}
+@media (max-width: 667px) {
+  nav .links {
+    position: absolute;
+    width: 50%;
+    background: #ff7e01;
+    top: 0;
+    height: 100vh;
+    z-index: 9999;
+    flex-direction: column;
+  }
+  nav .links li {
+    width: 100%;
+    text-align: center;
+    font-size: 1.7rem;
+    letter-spacing: 0.2rem;
+    margin: 0.5rem 0;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+  }
+  nav .links li:hover {
+    background-color: #faa935;
+  }
+  nav .links li:hover a {
+    color: #f8fafc;
+  }
+  nav .links li::before {
+    @apply hidden;
+  }
+  nav .bars {
+    @apply block;
+  }
+}
+@media (max-width: 390px) {
+  nav {
+    @apply flex-col;
+  }
+}

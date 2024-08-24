@@ -1,0 +1,39 @@
+.services {
+  padding: 1rem;
+  .services-content {
+    @include grid(40rem);
+    text-align: center;
+    justify-content: center;
+    .service-item {
+      margin: 1rem;
+      background-color: $boxColor;
+      @include radios(0.5rem);
+      color: $primaryColor;
+      padding: 0.5rem;
+      @include transition(0.7s);
+      &:hover {
+        animation: pulse 0.5s;
+        -webkit-animation: pulse 0.5s;
+      }
+      .services-img {
+        @apply flex items-center justify-center;
+        img {
+          width: 6rem !important;
+        }
+      }
+      .services-name {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        line-height: 1.8;
+      }
+      p {
+        color: $secondaryColor;
+        line-height: 1.8;
+        font-weight: 700;
+      }
+    }
+    @media (max-width: 467px) {
+      @include grid(20rem);
+    }
+  }
+}

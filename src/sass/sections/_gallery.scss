@@ -1,0 +1,28 @@
+.section-name {
+  @apply pt-[8rem] mt-[9rem];
+}
+.gallery {
+  display: grid;
+  gap: 0.5rem;
+  @media (min-width: 320px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .gallery-item {
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      @include radios(0.5rem);
+    }
+  }
+}

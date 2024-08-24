@@ -1,0 +1,31 @@
+.newsletter-container {
+  background: linear-gradient(#6c3806, #895409);
+  @apply my-[5rem] mx-[1rem] p-[2rem];
+  .content {
+    h2 {
+      @apply text-$whiteColor font-extrabold  text-[2rem] tracking-[.2rem] m-[1rem];
+    }
+    form {
+      @apply relative;
+      input {
+        @apply w-[100%] p-[1rem] border-none outline-none relative my-[3rem];
+        @include radios(0.5rem);
+      }
+      .send-data {
+        @apply absolute p-[.3rem] text-[1rem] top-[1.7rem] right-[-1.6rem];
+      }
+    }
+    p {
+      @apply text-slate-300 tracking-wider capitalize;
+    }
+  }
+  // Responsive
+  @media (max-width: 667px) {
+    flex-direction: column;
+  }
+  @media (max-width: 390px) {
+    .image {
+      display: none;
+    }
+  }
+}

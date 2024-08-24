@@ -1,0 +1,53 @@
+footer {
+  @apply flex items-center flex-wrap;
+}
+footer .footer-links {
+  @apply flex-1 m-[2rem];
+}
+footer .footer-links .logo {
+  @apply my-[1rem] p-4;
+}
+footer .footer-links .logo img {
+  width: 10rem;
+}
+footer .footer-links strong {
+  @apply text-slate-300 font-thin text-[1rem] tracking-wider block mb-5;
+}
+footer .footer-links .social-links {
+  @apply flex items-center;
+}
+footer .footer-links .social-links li {
+  @apply mr-[1rem];
+}
+footer .footer-links .social-links li svg {
+  @apply cursor-pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+footer .footer-links h3 {
+  @apply text-$primaryColor text-[2rem] font-bold p-2;
+}
+footer .footer-links ul li {
+  @apply py-3 m-2 text-xl;
+}
+footer .footer-links ul li a {
+  @apply text-slate-300;
+}
+footer .footer-links .contact-links li {
+  @apply flex items-center gap-1 text-slate-200 cursor-pointer;
+}
+footer .footer-links .contact-links li span {
+  @apply text-[1.5rem] text-$primaryColor;
+}
+@media (max-width: 390px) {
+  footer {
+    text-align: center;
+  }
+  footer img {
+    width: 100% !important;
+  }
+  footer .social-links,
+  footer .contact-links {
+    justify-content: center;
+  }
+}

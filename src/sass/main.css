@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.bounce-btn:hover {
+  animation: heartBeat;
+  animation-duration: 1s;
+}
+
+.loader__container .loader {
+  --d: 33px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  color: #ff7e01;
+  box-shadow: calc(1 * var(--d)) calc(0 * var(--d)) 0 0, calc(0.707 * var(--d)) calc(0.707 * var(--d)) 0 1px, calc(0 * var(--d)) calc(1 * var(--d)) 0 2px, calc(-0.707 * var(--d)) calc(0.707 * var(--d)) 0 3px, calc(-1 * var(--d)) calc(0 * var(--d)) 0 4px, calc(-0.707 * var(--d)) calc(-0.707 * var(--d)) 0 5px, calc(0 * var(--d)) calc(-1 * var(--d)) 0 6px;
+  animation: loader 1s infinite steps(8);
+  -webkit-animation: loader 1s infinite steps(8);
+}
+
+@keyframes loader {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+html {
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #171717;
+}
+
+::-moz-selection {
+  background-color: #ff7e01;
+  color: #f8fafc;
+}
+
+::selection {
+  background-color: #ff7e01;
+  color: #f8fafc;
+}
+
+.section-name {
+  color: #ff7e01;
+  padding: 0.6rem 3rem;
+  margin: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  text-wrap: balance;
+}
+@media (max-width: 390px) {
+  .section-name {
+    font-size: 1.2rem;
+  }
+}
+
+.hero__section h1 {
+  @apply text-$whiteColor text-6xl font-bold tracking-widest uppercase bg-$primaryColor p-2 text-balance w-fit;
+  margin-bottom: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 667px) {
+  .hero__section h1 {
+    font-size: 2rem;
+  }
+}
+
+.send-data {
+  background-color: #ff7e01;
+  color: #f8fafc;
+  padding: 0.6rem 3rem;
+  margin: 2rem;
+  border-radius: 0.2rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+
+.btn__delete {
+  font-size: 2rem !important;
+  font-weight: 900;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+.btn__delete:hover {
+  background-color: rgb(252, 0, 0);
+  animation: jello 0.5s !important;
+  -webkit-animation: jello 0.5s !important;
+}
+
+.none__active__bar {
+  transition: all 0.8s ease-in-out;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -ms-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+  right: 150% !important;
+}
+
+.active__bar {
+  transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  right: 50% !important;
+}
+
+.empty__section {
+  text-align: center;
+}
+.empty__section h1 {
+  color: #ff7e01;
+  font-size: 4rem;
+  font-weight: 900;
+  margin: 5rem;
+  padding: 3rem;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pagination .pagination__btn {
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  font-size: 1.6rem;
+  border: none;
+  background-color: #ff7e01;
+  color: #f8fafc;
+  margin: 0.5rem;
+}
+
+.disabled__btn {
+  background-color: rgb(209, 173, 139) !important;
+  pointer-events: none;
+}
+
+.skeleton__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  gap: 0.5rem;
+}
+.skeleton__container .item {
+  margin: 1rem;
+}
+
+.bounce-btn:hover {
+  animation: heartBeat;
+  animation-duration: 1s;
+}
+
+.loader__container .loader {
+  --d: 33px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  color: #ff7e01;
+  box-shadow: calc(1 * var(--d)) calc(0 * var(--d)) 0 0, calc(0.707 * var(--d)) calc(0.707 * var(--d)) 0 1px, calc(0 * var(--d)) calc(1 * var(--d)) 0 2px, calc(-0.707 * var(--d)) calc(0.707 * var(--d)) 0 3px, calc(-1 * var(--d)) calc(0 * var(--d)) 0 4px, calc(-0.707 * var(--d)) calc(-0.707 * var(--d)) 0 5px, calc(0 * var(--d)) calc(-1 * var(--d)) 0 6px;
+  animation: loader 1s infinite steps(8);
+  -webkit-animation: loader 1s infinite steps(8);
+}
+
+@keyframes loader {
+  100% {
+    transform: rotate(1turn);
+  }
+}

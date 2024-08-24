@@ -1,0 +1,57 @@
+.tour {
+  background-color: #281400;
+  box-shadow: 0px 0px 3px 0px #6b3f08;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+}
+.tour .tour-img img {
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  -ms-border-radius: 0.3rem;
+  -o-border-radius: 0.3rem;
+}
+.tour .name {
+  color: #ff7e01;
+}
+.tour .about strong {
+  color: #faa935;
+}
+.tour .about .summary {
+  color: #f8fafc;
+  font-family: lato;
+}
+.tour .primary-info {
+  font-weight: 500;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10.2rem, 1fr));
+  align-items: center;
+}
+.tour .primary-info svg {
+  color: #ff7e01;
+  margin: 0.5rem;
+  font-size: 1.8rem;
+}
+.tour .primary-info span {
+  color: #f8fafc;
+}
+.tour .sub-info {
+  border-top: 0.1rem solid rgba(255, 164, 0, 0.231372549);
+}
+.tour .sub-info .left-side .send-data {
+  border-radius: 5rem;
+  -webkit-border-radius: 5rem;
+  -moz-border-radius: 5rem;
+  -ms-border-radius: 5rem;
+  -o-border-radius: 5rem;
+  padding: 0.6rem 1rem;
+  margin: 1rem;
+  font-size: 1rem;
+}
+.tour .sub-info .left-side .send-data:hover {
+  animation: pulse 0.5s;
+  -webkit-animation: pulse 0.5s;
+}

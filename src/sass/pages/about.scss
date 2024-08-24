@@ -1,0 +1,44 @@
+@use "../helpers/mixins" as *;
+@use "../helpers/variables" as *;
+
+.hero__about {
+  @apply relative h-[90vh] w-[100%] bg-no-repeat bg-cover;
+  background-image: linear-gradient(
+      rgba(#000, 0.6) 100%,
+      transparent 0%,
+      transparent 0%
+    ),
+    url("../../images/tours/tour-12-cover.webp");
+}
+
+.about__container {
+  @include grid(30rem);
+  @apply text-center place-items-center;
+  .card {
+    @apply bg-slate-800  m-4 text-$whiteColor rounded-md;
+    margin-bottom: 1rem;
+    .card__icon {
+      @include flex {
+        justify-content: center;
+      }
+      font-size: 3rem;
+      padding: 0.5rem;
+      color: $secondaryColor;
+    }
+    .card__content {
+      padding: 1rem 0;
+      h4 {
+        @apply text-$primaryColor tracking-wider text-4xl font-bold my-4;
+      }
+      p {
+        @apply text-neutral-300;
+        line-height: 1.6;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  // Responsive
+  @media (max-width: 390px) {
+    @include grid(20rem);
+  }
+}

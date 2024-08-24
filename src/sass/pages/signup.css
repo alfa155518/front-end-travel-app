@@ -1,0 +1,80 @@
+.signup-page,
+.login-page {
+  margin: 2.5rem 2.5rem;
+  padding: 3rem 3rem;
+}
+.signup-page .primary-heading,
+.login-page .primary-heading {
+  padding-bottom: 3rem;
+  color: #f8fafc;
+}
+.signup-page .primary-heading h1,
+.login-page .primary-heading h1 {
+  font-size: 3rem;
+}
+.signup-page .primary-heading h1 strong,
+.login-page .primary-heading h1 strong {
+  color: #ff7e01;
+}
+.signup-page form input,
+.login-page form input {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  margin: 1rem;
+  outline: none;
+  font-size: 1.2rem;
+}
+.signup-page form input:focus,
+.login-page form input:focus {
+  margin-top: 0.5rem;
+  border-bottom: 0.3rem solid #ff7e01;
+}
+.signup-page form .input-image label,
+.login-page form .input-image label {
+  color: #faa935;
+  border-radius: 0.7rem;
+  -webkit-border-radius: 0.7rem;
+  -moz-border-radius: 0.7rem;
+  -ms-border-radius: 0.7rem;
+  -o-border-radius: 0.7rem;
+  transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+}
+.signup-page form .input-image label:hover,
+.login-page form .input-image label:hover {
+  background-color: #ff7e01;
+  color: #f8fafc;
+}
+.signup-page form .send-data,
+.login-page form .send-data {
+  transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+}
+.signup-page form .send-data:hover,
+.login-page form .send-data:hover {
+  background-color: #faa935;
+  transform: translateY(-1rem);
+  -webkit-transform: translateY(-1rem);
+  -moz-transform: translateY(-1rem);
+  -ms-transform: translateY(-1rem);
+  -o-transform: translateY(-1rem);
+}
+.signup-page .login-link,
+.login-page .login-link {
+  color: #f8fafc;
+}
+.signup-page .login-link a,
+.login-page .login-link a {
+  color: #ff7e01;
+}

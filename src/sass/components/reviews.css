@@ -1,0 +1,93 @@
+.all__reviews {
+  margin-top: 8rem;
+  padding: 4rem 1rem;
+}
+.all__reviews .slick-list .slick-track .slick-slide {
+  margin: 0 1rem;
+  min-width: 350px !important;
+  padding: 0;
+}
+.all__reviews .review {
+  @apply bg-slate-700  text-center rounded-md;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures content is spread evenly */
+  align-items: stretch;
+  margin-bottom: 1rem;
+}
+.all__reviews .review .reviewer__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.all__reviews .review .reviewer__img img {
+  @apply rounded-[50%];
+  width: 6rem;
+  height: 6rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.all__reviews .review p {
+  font-size: 1.4rem;
+  color: #f8fafc;
+  margin: 0.6rem 0;
+}
+.all__reviews .review .rating {
+  font-size: 1.5rem;
+  color: #ff7e01;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  @apply gap-6 justify-center;
+}
+
+.booking__box {
+  @apply mx-[6rem] p-7 flex justify-center;
+}
+.booking__box .content {
+  @apply p-5 rounded-xl bg-amber-800 text-center;
+  display: flex;
+  align-items: center;
+}
+.booking__box .book__img {
+  @apply mr-4;
+}
+.booking__box .book__img img {
+  @apply rounded-[50%];
+  width: 15rem;
+  height: 15rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.booking__box p {
+  @apply mx-5 text-xl text-slate-200;
+}
+.booking__box p strong {
+  @apply block;
+}
+.booking__box .send-data {
+  @apply rounded-[5rem];
+}
+.booking__box .send-data:hover {
+  animation: heartBeat 0.5s;
+  -webkit-animation: heartBeat 0.5s;
+}
+@media (max-width: 667px) {
+  .booking__box {
+    padding: 3rem 0.5rem;
+    margin: 3rem 0.5rem;
+  }
+  .booking__box .content {
+    width: 100%;
+  }
+  .booking__box img {
+    width: 25rem;
+    height: 8rem;
+    margin-bottom: 1.5rem;
+  }
+}
+@media (max-width: 547px) {
+  .booking__box .content {
+    flex-direction: column;
+  }
+}

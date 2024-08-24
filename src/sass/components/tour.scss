@@ -1,0 +1,52 @@
+@use "../helpers/variables" as *;
+@use "../helpers/mixins" as *;
+.tour {
+  background-color: #281400;
+  box-shadow: 0px 0px 3px 0px #6b3f08;
+  @include radios(0.3rem);
+  .tour-img {
+    img {
+      @include radios(0.3rem);
+    }
+  }
+  .name {
+    color: $primaryColor;
+  }
+  .about {
+    strong {
+      color: $secondaryColor;
+    }
+    .summary {
+      color: $whiteColor;
+      font-family: lato;
+    }
+  }
+  .primary-info {
+    font-weight: 500;
+    @include grid(10.2rem);
+    align-items: center;
+    svg {
+      color: $primaryColor;
+      margin: 0.5rem;
+      font-size: 1.8rem;
+    }
+    span {
+      color: $whiteColor;
+    }
+  }
+  .sub-info {
+    border-top: 0.1rem solid #ffa4003b;
+    .left-side {
+      .send-data {
+        @include radios(5rem);
+        padding: 0.6rem 1rem;
+        margin: 1rem;
+        font-size: 1rem;
+        &:hover {
+          animation: pulse 0.5s;
+          -webkit-animation: pulse 0.5s;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.section-name {
+  @apply mt-[10rem];
+}
+.experience {
+  .experience-content {
+    .experience-name {
+      color: $secondaryColor;
+    }
+    p {
+      color: $whiteColor;
+    }
+    .experience-info {
+      .item {
+        strong {
+          @apply text-$whiteColor bg-$primaryColor p-[.8rem] font-extrabold;
+          @include radios(0.5rem);
+        }
+        span {
+          @apply my-[1rem] text-$whiteColor text-[1.2rem] font-bold;
+        }
+      }
+    }
+    .send-data {
+      @apply p-[.5rem];
+    }
+  }
+  .experience-img {
+    img {
+      width: 50rem;
+    }
+  }
+  // Responsive
+  @media (max-width: 667px) {
+    flex-direction: column;
+    text-align: center;
+    .experience-info {
+      justify-content: center;
+    }
+  }
+  @media (max-width: 390px) {
+    .experience-name {
+      font-size: 1rem;
+    }
+    .experience-info {
+      flex-wrap: wrap;
+    }
+  }
+}

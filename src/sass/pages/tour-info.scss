@@ -1,0 +1,142 @@
+@use "../helpers/variables" as *;
+@use "../helpers/mixins" as *;
+@import "../sections/tour-map";
+%heading-item {
+  @apply text-$primaryColor font-bold tracking-wider;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.tour-container-info {
+  .tour-hero {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $primaryColor;
+      opacity: 0.8;
+    }
+    .tour-img {
+      img {
+        @apply relative w-[100%] h-[80vh] z-[-1] bg-cover;
+      }
+    }
+    .sub-info {
+      @apply text-$whiteColor absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center;
+      h1 {
+        @apply text-balance tracking-[1px];
+        padding: 1rem;
+        font-size: 4rem;
+      }
+      ul {
+        @apply flex items-center gap-3;
+        li {
+          @apply m-5 p-3 flex items-center;
+          svg {
+            @apply mx-3;
+            font-size: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+  // Responsive Hero Section
+  @media (max-width: 667px) {
+    .sub-info {
+      h1 {
+        font-size: 2rem !important;
+      }
+      ul {
+        flex-direction: column;
+        li {
+          flex-direction: column;
+          svg {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .primary-tour-info {
+    .details {
+      h2 {
+        @extend %heading-item;
+      }
+      .facts {
+        li {
+          @apply flex items-center gap-[1.5rem] mb-3;
+          .icon {
+            @apply text-$primaryColor;
+            font-size: 1.8rem;
+          }
+          span {
+            @apply text-$whiteColor;
+            font-size: 1.2rem;
+          }
+          strong {
+            @apply text-slate-400;
+            font-size: 1.2rem;
+            font-weight: 600;
+          }
+        }
+      }
+      h3 {
+        @extend %heading-item;
+      }
+      .guides {
+        li {
+          @apply flex items-center flex-wrap  py-2 my-2;
+          img {
+            @apply w-[50px]  object-cover mr-3;
+            @include radios(50%);
+          }
+          h4 {
+            @apply text-$secondaryColor mr-2;
+            font-size: 1.5rem;
+            font-weight: 800;
+          }
+          h5 {
+            @apply text-gray-100 mr-2;
+            font-size: 1rem;
+            font-weight: 300;
+            margin: 1rem 0;
+          }
+        }
+      }
+    }
+    .about {
+      @apply bg-slate-900 p-5;
+      h2 {
+        @extend %heading-item;
+      }
+      p,
+      article {
+        @apply text-slate-200 leading-[1.8]  my-5;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  // Responsive Primary Info
+  @media (max-width: 667px) {
+    .primary-tour-info {
+      flex-direction: column;
+      text-align: center;
+      .details {
+        ul {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          li {
+            margin-bottom: 2rem !important;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}

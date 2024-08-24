@@ -1,0 +1,32 @@
+@mixin center-section($mtb, $mlt, $ptb, $plt) {
+  margin: $mtb $mlt;
+  padding: $ptb $plt;
+}
+
+@mixin radios($radios) {
+  border-radius: $radios;
+  -webkit-border-radius: $radios;
+  -moz-border-radius: $radios;
+  -ms-border-radius: $radios;
+  -o-border-radius: $radios;
+}
+
+@mixin transition($time) {
+  transition: all $time ease-in-out;
+  -webkit-transition: all $time ease-in-out;
+  -moz-transition: all $time ease-in-out;
+  -ms-transition: all $time ease-in-out;
+  -o-transition: all $time ease-in-out;
+}
+
+@mixin grid($size) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($size, 1fr));
+  @content;
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+  @content;
+}

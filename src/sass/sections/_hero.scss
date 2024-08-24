@@ -1,0 +1,60 @@
+.hero {
+  background-image: linear-gradient(
+      rgba(#000, 0.8) 100%,
+      transparent 0%,
+      transparent 0%
+    ),
+    url("../../images/hero-img02.WebP");
+  position: relative;
+  .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: $whiteColor;
+    font-weight: 700;
+    font-size: 1.2rem;
+    .typed {
+      width: 100%;
+      color: $primaryColor;
+      letter-spacing: 0.1rem;
+      font-weight: 700;
+      font-size: 2rem;
+      position: absolute;
+      transform: translateY(-3rem);
+      -webkit-transform: translateY(-3rem);
+      -moz-transform: translateY(-3rem);
+      -ms-transform: translateY(-3rem);
+      -o-transform: translateY(-3rem);
+    }
+    .typed-cursor {
+      display: none;
+    }
+    article {
+      font-size: 1.1rem;
+      letter-spacing: 0.1rem;
+      font-weight: 400;
+      margin-top: 3rem;
+    }
+    button {
+      @include transition(0.6s);
+      width: calc(100% - 20px);
+      &:hover {
+        transform: translateY(-1rem);
+        -webkit-transform: translateY(-1rem);
+        -moz-transform: translateY(-1rem);
+        -ms-transform: translateY(-1rem);
+        -o-transform: translateY(-1rem);
+      }
+    }
+  }
+  @media (max-width: 467px) {
+    .text {
+      article {
+        margin-top: 5rem;
+      }
+    }
+  }
+}
