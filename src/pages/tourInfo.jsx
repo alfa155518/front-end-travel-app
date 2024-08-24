@@ -1,6 +1,4 @@
-import { useContext } from "react";
 import { useParams } from "react-router-dom";
-import { TourContext } from "../context/TourManagement";
 import MapBox from "./map";
 import TourDetails from "../sections/tourDetails";
 import { useQuery } from "@tanstack/react-query";
@@ -8,18 +6,18 @@ import Footer from "../layout/footer";
 import NavBar from "../layout/navBar";
 import Reviews from "../components/reviews";
 import "../sass/pages/tour-info.css";
+import axios from "axios";
 
 function TourInfo() {
   const { tourId } = useParams();
-
   const { data: tour } = useQuery({
-    queryKey: ["tours", tourId],
+    queryKey: ["tour", tourId],
     queryFn: async () => {
       try {
-        const response = await fetch(
+        const response = await axios.get(
           `http://localhost:8000/api/v1/tours/${tourId}`
         );
-        const data = await response.json();
+        const data = await response.data;
         return data.data;
       } catch (error) {
         console.error("Error fetching tour:", error);
@@ -34,9 +32,9 @@ function TourInfo() {
     <>
       <NavBar />
       <div className="tour-container-info ">
-        <TourDetails tour={tour} />
-        <MapBox tourLocations={tour} />
-        <Reviews tour={tour} />
+        {tour && <TourDetails tour={tour} />}
+        {tour && <MapBox tourLocations={tour} />}
+        {tour && <Reviews tour={tour} />}
       </div>
       <Footer />
     </>
